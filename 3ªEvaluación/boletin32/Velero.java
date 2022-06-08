@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package boletin32;
 
-/**
- *
- * @author EVEN
- */
-public class Velero {
+public class Velero extends Barco{
+    
+    int mastiles=0;
+
+    public Velero(String matricula, float eslora, int mastiles) {
+        super(matricula, eslora);
+        
+    }
+    
+    public float calcularPrezo(int dias){
+        return (10*this.eslora+((8*this.mastiles)+(10*this.eslora))*dias);
+    }
+    
+    
     
 }
