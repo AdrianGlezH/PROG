@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package boletin32;
 
-/**
- *
- * @author EVEN
- */
-public class Barco {
+import javax.swing.JOptionPane;
+
+public abstract class Barco {
+  
+   String matricula = "";
+   float eslora= 0f;
+        
+    public Barco(String matricula, float eslora) {
+        this.matricula = matricula;
+        this.eslora = eslora;
+    }
     
+    public abstract float calcularPrezo(int dias);
+    
+   
 }
