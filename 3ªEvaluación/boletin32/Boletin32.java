@@ -13,7 +13,7 @@ public class Boletin32 {
         
         Barco v1 = new Velero("v1", 20, 3);
         Barco d1 = new Deportivo("d1", 30, 5);
-        Barco y1 = new Yate("y1", 20, 4);
+        Barco y1 = new Yate("y1", 20, 4, 2);
         
         renta.add(v1);
         renta.add(d1);
