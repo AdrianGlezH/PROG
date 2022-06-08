@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package boletin32;
 
-/**
- *
- * @author EVEN
- */
-public class Yate {
+public class Yate extends Barco{
+    
+    float potencia;
+    int camarotes;
+
+    public Yate(String matricula, float eslora, float potencia, int camarotes) {
+        super(matricula, eslora);
+        this.potencia = potencia;
+        this.camarotes = camarotes;
+    }
+    
+    public float calcularPrezo(int dias){
+        return(10*this.eslora+((2*this.potencia)+(25*this.camarotes))*dias);
+    }
     
 }
