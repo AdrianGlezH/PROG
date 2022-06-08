@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package boletin32;
 
-/**
- *
- * @author EVEN
- */
-public class Deportivo {
+public class Deportivo extends Barco{
     
+    float potencia;
+
+    public Deportivo(String matricula, float eslora, float potencia) {
+        super(matricula, eslora);
+        this.potencia = potencia;
+    }
+    
+    public float calcularPrezo(int dias){
+        return(10*this.eslora+(2*this.potencia)*dias);
+    }
 }
