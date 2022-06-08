@@ -1,20 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package boletin32;
 
-/**
- *
- * @author EVEN
- */
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 public class Boletin32 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        ArrayList<Barco> renta = new ArrayList<>();
+        
+        int nDias = Integer.parseInt(JOptionPane.showInputDialog("Número de días: "));
+        
+        Barco v1 = new Velero("v1", 20, 3);
+        Barco d1 = new Deportivo("d1", 30, 5);
+        Barco y1 = new Yate("y1", 20, 4);
+        
+        renta.add(v1);
+        renta.add(d1);
+        renta.add(y1);
+                
+        for (Barco b : renta){
+            System.out.println(b.calcularPrezo(nDias));
+            
+        }
+
     }
     
 }
